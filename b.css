@@ -1,0 +1,222 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    background: #0f0f0f; /* Dark background */
+    line-height: 1.6;
+  }
+  
+  /* Navigation */
+  header {
+    background: linear-gradient(90deg, #8a2387, #e94057, #f27121); 
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+  }
+  
+  nav ul li {
+    margin: 0 25px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+  
+  nav ul li a:hover {
+    color: #f39c12;
+    transform: scale(1.1);
+    text-shadow: 0 0 8px #ff9800;
+  }
+  
+  /* Sections */
+  .section {
+    padding: 100px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s, transform 1s;
+  }
+  
+  /* Slide-in Effect */
+  .section.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  /* Home Section */
+  #home {
+    background: linear-gradient(135deg, #8a2387, #e94057, #f27121);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  #home h1 {
+    font-size: 60px;
+    text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.8);
+    letter-spacing: 1px;
+  }
+  
+  #home p {
+    font-size: 22px;
+    margin: 20px 0;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 14px 35px;
+    font-size: 20px;
+    color: #fff;
+    background: #ff4e50; /* Red button */
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.4s;
+    box-shadow: 0 5px 20px rgba(255, 78, 80, 0.7);
+  }
+  
+  .btn:hover {
+    background: #f27121; 
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(255, 140, 0, 0.9);
+  }
+  
+  /* About Section */
+  #about {
+    background: linear-gradient(135deg, #f27121, #e94057);
+    color: #fff;
+  }
+  
+  #about h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #ff9800;
+  }
+  
+  #about p {
+    font-size: 20px;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #f0f0f0;
+  }
+  
+  /* Projects Section */
+  #projects {
+    background: linear-gradient(135deg, #8a2387, #e94057);
+    color: #fff;
+  }
+  
+  #projects h2 {
+    font-size: 50px;
+    margin-bottom: 40px;
+    text-shadow: 0 0 12px #ff9800;
+  }
+  
+  #projects ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #projects li {
+    font-size: 22px;
+    margin: 20px 0;
+    transition: 0.3s;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  #projects li:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 25px rgba(255, 140, 0, 0.9);
+    transition: 0.4s;
+  }
+  
+  /* Contact Section */
+  #contact {
+    background: #0f0f0f; 
+    color: #fff;
+  }
+  
+  #contact h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #ff9800;
+  }
+  
+  #contact p {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  
+  /* Footer */
+  footer {
+    background: linear-gradient(90deg, #8a2387, #e94057, #f27121);
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+    }
+  
+    nav ul li {
+      margin: 15px 0;
+    }
+  
+    #home h1 {
+      font-size: 40px;
+    }
+  
+    .btn {
+      padding: 12px 25px;
+    }
+  }
+  
